@@ -1,0 +1,9 @@
+destination:  ./_site
+auto:         false
+lsi:          false
+server_port:  4000
+pygments:     false
+permalink:    pretty
+markdown:     rdiscount
+rdiscount:
+  extensions: [smart]
