@@ -1,0 +1,17 @@
+---
+layout: default
+title: Commercial
+section: commercial
+---
+
+<p>
+  We have done dairies, churches, university buildings, block walls,
+  warehouses.
+</p>
+
+{% for post in site.categories.commercial %}
+<section>
+  <h2>{{ post.title }}</h2>
+  <img src="{{ post.image }}" width="256px" height="192px" />
+</section>
+{% endfor %}
