@@ -11,15 +11,7 @@
 
   <body id="{{ page.section }}">
     <div class="container">
-      <header>
-        <h1 class="title"><a href="/">{{ page.title }}</a></h1>
-      {% if page.section == 'home' %}
-        <h4>Lic. 12345678</h4>
-        <h3>Serving the California Central Valley since 1978</h3>
-      {% endif %}
-      </header>
-
-      <nav>
+     <nav>
         <ul>
         {% unless page.section == 'home' %}
           <li id="home">
@@ -51,7 +43,17 @@
       </nav>
 
       <article>
-        {{ content }}
+        <header>
+        <h1 class="title"><a href="/">{{ page.title }}</a></h1>
+        {% if page.section == 'home' %}
+        <h4>Lic. 12345678</h4>
+        <h3>Serving the California Central Valley since 1978</h3>
+        {% endif %}
+        </header>
+
+        <section class="content">
+          {{ content }}
+        </section>
       </article>
 
       <footer>
