@@ -4,8 +4,10 @@
 body { 
   font-size: 62.5%; /* Resets 1em to 10px */
   font-family: "Helvetica Neue",arial,clean,sans-serif;
-  background-color: white;
+  background-color: #929292;
   color: black;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -32,19 +34,113 @@ p {
   font-size: 1.4em;
 }
 
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+}
+
 /* @group helper styles
 ------------------------------------------------------------------------------*/
 
 /* @group page structure
 ------------------------------------------------------------------------------*/
 
+.container {
+  position: relative;
+  left: 1.0em;
+  top: 8.0em;
+
+  width: 78.0em;
+  margin: 0 0;
+}
+
+header {
+  position: absolute;
+  width: 40em;
+}
+
+article {
+  width: 64.7em;
+  height: 500px;
+  margin: 1em;
+  padding: 0;
+}
+
+nav {
+  position: absolute;
+  right: 0.0em;
+  top: -8.0em;
+  width: 11.3em;
+  margin: 0;
+  padding: 0;
+}
+
 /* @group page components
 ------------------------------------------------------------------------------*/
 
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+nav li a {
+  font-size: 1.8em;
+}
+
 nav img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 110px;
   height: 83px;
+  /* padding: 0.4em 0.0em; */
+}
+
+.abstract {
+  width: 43.0em;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* @group overrides
 ------------------------------------------------------------------------------*/
+
+body#home {
+  background-image:url('/images/home/bg.jpg');
+  background-repeat: no-repeat;
+}
+
+#home header h1,
+#home header h3,
+#home header h4 {
+  display: inline;
+}
+
+#home header h1 {
+  margin-right: 1.0em;
+}
+#home header h4 {
+  margin-right: auto;
+}
+
+
+a[href^="/"],
+a[href^="http://rayperrysmasonry.com"],
+a[href^="http://www.rayperrysmasonry.com"] {
+  color: black;
+}
+

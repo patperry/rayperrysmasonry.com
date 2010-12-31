@@ -10,64 +10,66 @@
   </head>
 
   <body id="{{ page.section }}">
-    <header>
-      <h1 class="title"><a href="/">{{ page.title }}</a></h1>
-    {% if page.section == 'home' %}
-      <h4>Lic. 12345678</h4>
-      <h3>Serving the California Central Valley since 1978</h3>
-    {% endif %}
-    </header>
+    <div class="container">
+      <header>
+        <h1 class="title"><a href="/">{{ page.title }}</a></h1>
+      {% if page.section == 'home' %}
+        <h4>Lic. 12345678</h4>
+        <h3>Serving the California Central Valley since 1978</h3>
+      {% endif %}
+      </header>
 
-    <nav>
-      <ul>
-      {% unless page.section == 'home' %}
-        <li id="home">
-          <a href="/" title="Home">
-            <img src="/images/nav/home.jpg" alt="home" />
-            Home
-          </a>
-        </li>
-      {% endunless %}
-        <li id="commercial">
-          <a href="/commercial" title="Commercial">
-            <img src="/images/nav/commercial.jpg" alt="commercial" />
-            Commercial
-          </a>
-        </li>
-        <li id="residential">
-          <a href="/residential" title="Residential">
-            <img src="/images/nav/residential.jpg" alt="residential" />
-            Residential
-          </a>
-        </li>
-        <li id="about">
-          <a href="/about" title="About">
-            <img src="/images/nav/about.jpg" alt="about" />
-            About
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+        {% unless page.section == 'home' %}
+          <li id="home">
+            <a href="/" title="Home">
+              <img src="/images/nav/home.jpg" alt="home" />
+              Home
+            </a>
+          </li>
+        {% endunless %}
+          <li id="commercial">
+            <a href="/commercial" title="Commercial">
+              <img src="/images/nav/commercial.jpg" alt="commercial" />
+              Commercial
+            </a>
+          </li>
+          <li id="residential">
+            <a href="/residential" title="Residential">
+              <img src="/images/nav/residential.jpg" alt="residential" />
+              Residential
+            </a>
+          </li>
+          <li id="about">
+            <a href="/about" title="About">
+              <img src="/images/nav/about.jpg" alt="about" />
+              About
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-    <article>
-      {{ content }}
-    </article>
+      <article>
+        {{ content }}
+      </article>
 
-    <footer>
-      <p class="address">
-        Ray's Masonry     <br />
-        P.O. Box 12345    <br />
-        Modesto, CA 95350 <br />
-      </p>
+      <footer>
+        <p class="address">
+          Ray's Masonry     <br />
+          P.O. Box 12345    <br />
+          Modesto, CA 95350 <br />
+        </p>
 
-      <p class="email">
-        Email: <a href="mailto:ray@rayperrysmasonry.com">ray@rayperrysmasonry.com</a>
-      </p>
+        <p class="email">
+          Email: <a href="mailto:ray@rayperrysmasonry.com">ray@rayperrysmasonry.com</a>
+        </p>
 
-      <p class="phone">
-        Phone: (209) 522-8729 <br />
-        Fax:   (209) 888-8888 <br />
-      </p>
-   </footer>
+        <p class="phone">
+          Phone: (209) 522-8729 <br />
+          Fax:   (209) 888-8888 <br />
+        </p>
+     </footer>
+   </div>
  </body>
 </html>
