@@ -9,18 +9,23 @@ body {
 }
 
 h1 {
-  font-size: 2.8em;
+  font-size: 3.2em;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 2.2em;
+  font-size: 2.4em;
   font-weight: bold;
 }
 
 h3 {
-  font-size: 1.6em;
-  font-weight: bold;
+  font-size: 1.8em;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.2em;
+  font-weight: normal;
 }
 
 /* @group helper styles
@@ -31,6 +36,11 @@ h3 {
 
 /* @group page components
 ------------------------------------------------------------------------------*/
+
+nav img {
+  width: 110px;
+  height: 83px;
+}
 
 /* @group overrides
 ------------------------------------------------------------------------------*/

@@ -1,27 +1,73 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>Ray's Masonry - {{ page.title }}</title>
- <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css" media="screen, projection" />
-</head>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Ray's Masonry - {{ page.title }}</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css" media="screen, projection" />
+  </head>
 
-<body id="{{ page.section }}">
-  <div class="wrapper">
-    <div class="header">
-      <h1 class="title"><a href="/">Ray's Masonry</a></h1>
-   </div>
+  <body id="{{ page.section }}">
+    <header>
+      <h1 class="title"><a href="/">{{ page.title }}</a></h1>
+    {% if page.section == 'home' %}
+      <h4>Lic. 12345678</h4>
+      <h3>Serving the California Central Valley since 1978</h3>
+    {% endif %}
+    </header>
 
-    <div class="content">
+    <nav>
+      <ul>
+      {% unless page.section == 'home' %}
+        <li id="home">
+          <a href="/" title="Home">
+            <img src="/images/nav/home.jpg" alt="home" />
+            Home
+          </a>
+        </li>
+      {% endunless %}
+        <li id="commercial">
+          <a href="/commercial" title="Commercial">
+            <img src="/images/nav/commercial.jpg" alt="commercial" />
+            Commercial
+          </a>
+        </li>
+        <li id="residential">
+          <a href="/residential" title="Residential">
+            <img src="/images/nav/residential.jpg" alt="residential" />
+            Residential
+          </a>
+        </li>
+        <li id="about">
+          <a href="/about" title="About">
+            <img src="/images/nav/about.jpg" alt="about" />
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <article>
       {{ content }}
-    </div>
+    </article>
 
-    <div class="footer">
+    <footer>
       <p class="address">
-        Ph. (209) 522-8729<br />
-        Fax (209) 888-8888<br />
-     </p>
-   </div>
-  </div>
-</body>
+        Ray's Masonry     <br />
+        P.O. Box 12345    <br />
+        Modesto, CA 95350 <br />
+      </p>
+
+      <p class="email">
+        Email: <a href="mailto:ray@rayperrysmasonry.com">ray@rayperrysmasonry.com</a>
+      </p>
+
+      <p class="phone">
+        Phone: (209) 522-8729 <br />
+        Fax:   (209) 888-8888 <br />
+      </p>
+   </footer>
+ </body>
 </html>
