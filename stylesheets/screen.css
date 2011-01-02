@@ -49,8 +49,10 @@ td {
   padding: 0;
 }
 
-td + td {
-  /* padding-left: 0.5em; */
+nav ol, nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a:link,
@@ -96,7 +98,7 @@ article {
   padding: 8.0em 1.0em 1.0em;
 }
 
-nav {
+.container > nav {
   float: right;
   width: 11.3em;
   height: 48.0em;
@@ -109,32 +111,29 @@ footer {
   width: 100%;
 }
 
+.subtitle, .title {
+  display: inline;
+}
+
 /* @group page components
 ------------------------------------------------------------------------------*/
 
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
+.container > nav li {
   text-align: center;
   margin-top: 1.5em;
 }
 
-nav li a {
+.container > nav li a {
   font-size: 1.8em;
 }
 
-nav img {
+.container > nav img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 110px;
   height: 83px;
-  /* padding: 0.4em 0.0em; */
 }
 
 footer .address {
@@ -169,18 +168,56 @@ footer .emailphone {
   margin: 1.1em 0 0.4em;
 }
 
+article nav {
+  width: 58.7em;
+  padding: 0 3.0em;
+  display: block;
+  text-align: center;
+}
+
+article img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article nav ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+article nav a {
+  font-weight: bold;
+  padding: 0.8em 0;
+  font-size: 1.8em;
+}
+
+article nav a[rel="prev"] {
+  float: left;
+}
+
+article nav a[rel="prev"]:before {
+  content: "\00AB";
+  padding-right: 0.5em;
+}
+
+article nav a[rel="next"] {
+  float: right;
+}
+
+article nav a[rel="next"]:after {
+  content: "\00BB";
+  padding-left: 0.5em;
+}
+
+
 /* @group overrides
 ------------------------------------------------------------------------------*/
 
 #home .container {
   background-image:url('/images/home/bg.jpg');
   background-repeat: no-repeat;
-}
-
-#home header h1,
-#home header h3,
-#home header h4 {
-  display: inline;
 }
 
 #home header h1 {

@@ -18,8 +18,10 @@ section: commercial
 <section class="thumbnails">
   {% for post in site.categories.commercial %}
   <div class="thumbnail">
-    <h2>{{ post.title }}</h2>
-    <img src="{{ post.thumb }}" width="256px" height="192px" />
+    <a href="{{ post.url }}">
+      <h2>{{ post.title }}</h2>
+      <img src="{{ post.thumb }}" width="256px" height="192px" />
+    </a>
   </div>
   {% endfor %}
 </section>
