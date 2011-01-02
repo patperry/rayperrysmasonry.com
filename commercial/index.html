@@ -9,9 +9,11 @@ section: commercial
   warehouses.
 </p>
 
-{% for post in site.categories.commercial %}
-<section>
-  <h2>{{ post.title }}</h2>
-  <img src="{{ post.image }}" width="256px" height="192px" />
+<section class="thumbnails">
+  {% for post in site.categories.commercial %}
+  <div class="thumbnail">
+    <h2>{{ post.title }}</h2>
+    <img src="{{ post.thumb }}" width="256px" height="192px" />
+  </div>
+  {% endfor %}
 </section>
-{% endfor %}

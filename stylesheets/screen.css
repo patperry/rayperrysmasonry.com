@@ -154,6 +154,21 @@ footer .emailphone {
   margin-right: auto;
 }
 
+.thumbnails {
+  margin-left: 4.5em;
+}
+
+.thumbnail {
+  width: 25.6em;
+  margin: 0 4.5em 0 0;
+  float: left;
+}
+
+.thumbnail h2 {
+  text-align: center;
+  margin: 1.1em 0 0.4em;
+}
+
 /* @group overrides
 ------------------------------------------------------------------------------*/
 
