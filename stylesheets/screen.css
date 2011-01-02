@@ -35,8 +35,22 @@ h4 {
   font-weight: normal;
 }
 
-p {
+p, td {
   font-size: 1.4em;
+}
+
+table {
+  border: 0;
+  margin: 1.4em 0;
+}
+
+td {
+  text-align: left;
+  padding: 0;
+}
+
+td + td {
+  /* padding-left: 0.5em; */
 }
 
 a:link,
@@ -91,6 +105,8 @@ nav {
 
 footer {
   clear: both;
+  overflow: auto;
+  width: 100%;
 }
 
 /* @group page components
@@ -119,6 +135,16 @@ nav img {
   width: 110px;
   height: 83px;
   /* padding: 0.4em 0.0em; */
+}
+
+footer .address {
+  float: left;
+  padding-left: 6.6em;
+}
+
+footer .emailphone {
+  float: right;
+  padding-right: 6.6em;
 }
 
 .abstract {
