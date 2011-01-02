@@ -2,7 +2,11 @@
 layout: default
 ---
 
-<section>
+<header>
+  <h1 class="title"><a href="/{{ page.section }}">{{ page.title }}</a></h1>
+</header>
+
+<section class="content">
   <img src="{{ page.image }}" width="256px" />
   {{ page.content }}
 </section>

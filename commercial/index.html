@@ -4,10 +4,16 @@ title: Commercial
 section: commercial
 ---
 
-<p>
-  We have done dairies, churches, university buildings, block walls,
-  warehouses.
-</p>
+<header>
+  <h1 class="title"><a href="/{{ page.section }}">{{ page.title }}</a></h1>
+</header>
+
+<section class="content">
+  <p>
+    We have done dairies, churches, university buildings, block walls,
+    warehouses.
+  </p>
+</section>
 
 <section class="thumbnails">
   {% for post in site.categories.commercial %}

@@ -4,13 +4,21 @@ title: Resdiential
 section: residential
 ---
 
-<p>
-  We have done fireplaces, planters, brick veneers, stone walls, etc.
-</p>
+<header>
+  <h1 class="title"><a href="/{{ page.section }}">{{ page.title }}</a></h1>
+</header>
 
-{% for post in site.categories.residential %}
-<section>
-  <h2>{{ post.title }}</h2>
-  <img src="{{ post.image }}" width="256px" height="192px" />
+<section class="content">
+  <p>
+    We have done fireplaces, planters, brick veneers, stone walls, etc.
+  </p>
 </section>
-{% endfor %}
+
+<section class="thumbnails">
+  {% for post in site.categories.residential %}
+  <div class="thumbnail">
+    <h2>{{ post.title }}</h2>
+    <img src="{{ post.thumb }}" width="256px" height="192px" />
+  </div>
+  {% endfor %}
+</section>

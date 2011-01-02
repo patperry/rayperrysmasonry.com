@@ -43,20 +43,8 @@
       </nav>
 
       <article>
-        <header>
-        {% if page.section == 'home' %}
-        <h1 class="title"><a href="/">Ray's Masonry</a></h1>
-        <h4>Lic. 12345678</h4>
-        <h3>Serving the California Central Valley since 1978</h3>
-        {% else %}
-        <h1 class="title"><a href="/{{ page.section }}">{{ page.title }}</a></h1>
-        {% endif %}
-        </header>
-
-        <section class="content">
-          {{ content }}
-        </section>
-      </article>
+        {{ content }}
+     </article>
 
       <footer>
         <div class="address">
