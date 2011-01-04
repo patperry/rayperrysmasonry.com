@@ -10,15 +10,22 @@ section: residential
 
 <section class="content">
   <p>
-    We have done fireplaces, planters, brick veneers, stone walls, etc.
-  </p>
+    Our experience includes both indoor and outdoor features for
+    residential homes/structures. Whether you require a custom fireplace
+    or a wall to enclose your garden, we are happy to provide you with an
+    estimate and to suggest materials to complete the project. Please
+    consult the images below to witness/view our range and to inspire your
+    own home design.
+ </p>
 </section>
 
 <section class="thumbnails">
-  {% for post in site.categories.residential %}
+  {% for post in site.categories.residential reversed %}
   <div class="thumbnail">
-    <h2>{{ post.title }}</h2>
-    <img src="{{ post.thumb }}" width="256px" height="192px" />
+    <a href="{{ post.url }}">
+      <h2>{{ post.title }}</h2>
+      <img src="{{ post.thumb }}" width="256px" height="192px" />
+    </a>
   </div>
   {% endfor %}
 </section>
