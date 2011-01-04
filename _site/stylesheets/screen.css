@@ -227,6 +227,11 @@ article nav a[rel="next"]:after {
   margin-right: auto;
 }
 
+#home header h3 {
+  display: block;
+  margin: 0;
+}
+
 #post header h1 {
   padding-right: 0.2em;
 }
