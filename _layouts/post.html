@@ -15,10 +15,10 @@ section: post
 
 <nav>
   <ol>
-    {% if page.previous %}
+    {% if page.previous and page.previous.category == page.category %}
       <li><a href="{{ page.previous.url }}" rel="prev">Previous</a></li>
     {% endif %}
-    {% if page.next %}
+    {% if page.next and page.next.category == page.category %}
       <li><a href="{{ page.next.url }}" rel="next">Next</a></li>
     {% endif %}
   </ol>
