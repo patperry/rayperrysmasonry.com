@@ -13,3 +13,15 @@ get '/' do
   File.read('_site/index.html')
 end
 
+get '/commercial' do
+  File.read('_site/commercial/index.html')
+end
+
+get '/residential' do
+  File.read('_site/residential/index.html')
+end
+
+get '/about' do
+  File.read('_site/about/index.html')
+end
+
