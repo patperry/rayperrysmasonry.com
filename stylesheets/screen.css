@@ -1,13 +1,17 @@
 /* @group general styles
 ------------------------------------------------------------------------------*/
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body { 
   font-size: 62.5%; /* Resets 1em to 10px */
   font-family: "Helvetica Neue",arial,clean,sans-serif;
   background-color: white; /* #929292; */
   color: black;
-  margin: 0;
-  padding: 0;
 }
 
 div {
@@ -66,6 +70,7 @@ a:active {
   text-decoration: underline;
 }
 
+
 /* @group helper styles
 ------------------------------------------------------------------------------*/
 
@@ -83,15 +88,19 @@ a:active {
 ------------------------------------------------------------------------------*/
 
 .container {
+  position: relative;
+  margin: 0 auto;
   width: 80.0em;
   background-color: #929292;
-  margin: 0 auto;
+  height: auto !important; /* real browsers */
+  height: 100%;            /* IE6: treated as min-height */
+  min-height: 100%;        /* real browsers */
 }
 
 header {
 }
 
-article {
+.container > article {
   float: left;
   width: 64.7em;
   padding: 8.0em 1.0em 1.0em;
@@ -104,10 +113,21 @@ article {
   padding: 1.0em;
 }
 
-footer {
+.container > #eoc {
+  height: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
+
   clear: both;
-  overflow: auto;
+  display: block;
+  padding-bottom: 10.0em; /* ensure space for footer */
+}
+
+footer {
+  position: absolute;
   width: 100%;
+  bottom: 0;
 }
 
 .subtitle, .title {
